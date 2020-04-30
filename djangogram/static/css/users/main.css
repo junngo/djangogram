@@ -1,0 +1,94 @@
+body {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    margin-top: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* auth */
+.auth {
+    background-color: white;
+    width: 350px;
+    height: 300px;
+    border: 1px solid #efefef;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: auto;
+}
+
+.auth form input {
+    margin-bottom: 10px;
+}
+
+.auth form input:last-child{
+    margin-top: 10px;
+}
+
+/* Sign up, Log in Link */
+.auth_link {
+    margin-top: 50px;
+    background-color: white;
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #efefef;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: warp;
+}
+
+footer .list {
+    margin: auto;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 10px;
+}
+
+footer ul li a {
+    color: #00376b;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+footer .company {
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+
+
+
+
