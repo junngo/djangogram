@@ -1,0 +1,49 @@
+/* Header */
+.header {
+    height: 54px;
+    background-color: white;
+    border: solid 1px #D2D2D2;
+    display: flex;
+    justify-content: center;
+}
+
+.header-box {
+    width: 945px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header - logo img */
+.main-img img {
+    width: 130px;
+    height: 54px;
+}
+
+/* Header - search box */
+input {
+    border: solid 1px #D2D2D2;
+    text-align: center;
+}
+
+input[type="text"], textarea {
+    background-color: #fafafa;
+}
+
+
+/* Heaer - header-right */
+.header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.header-right div {
+    margin: 10px;
+}
+
+.header-right a {
+    color: black;
+}

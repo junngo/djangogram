@@ -1,6 +1,18 @@
 djangogram
 ==========
 
+To-Do
+-----
+- [] 포스트 생성
+- [] 포스트 수정
+- [] 포스트 삭제
+- [] 포스트 리스트(피드)
+- [] 댓글
+- [] 좋아요
+- [] 검색
+- [] 프로필 피드
+
+
 Behold My Awesome Project!
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
