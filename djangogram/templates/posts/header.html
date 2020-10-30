@@ -2,7 +2,7 @@
 <header>
     <div class="header-box">
         <div class="main-img">
-            <a href="#">
+            <a href="{% url 'posts:index' %}">
                 <img src="{% static 'images/posts/main_logo.png'%}" alt="logo">
             </a>
         </div>
@@ -11,7 +11,7 @@
         </div>
         <div class="header-right">
             <div>
-                <a href="#">
+                <a href="{% url 'posts:post_create' %}">
                     <i class="fa fa-plus-circle fa-2x"></i>
                 </a>
             </div>
