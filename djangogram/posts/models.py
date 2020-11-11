@@ -18,7 +18,7 @@ class Post(TimeStamedModel):
                 related_name= 'post_author'
             )
     image = models.ImageField(blank=True)
-    cpation = models.TextField(blank=True)
+    caption = models.TextField(blank=True)
     image_likes = models.ManyToManyField(user_model.User, related_name='post_image_likes')
 
 
