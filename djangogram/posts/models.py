@@ -19,7 +19,14 @@ class Post(TimeStamedModel):
             )
     image = models.ImageField(blank=False)
     caption = models.TextField(blank=False)
-    image_likes = models.ManyToManyField(user_model.User, related_name='post_image_likes')
+    image_likes = models.ManyToManyField(
+                    user_model.User,
+                    blank=True,
+                    related_name='post_image_likes'
+            )
+
+    def __str__(self):
+        return f"{self.author}: {self.caption}"
 
 
 class Comment(TimeStamedModel):
@@ -36,3 +43,6 @@ class Comment(TimeStamedModel):
             related_name= 'comment_post'
         )
     contents = models.TextField(blank=True)
+
+    def __str__(self):
+        return f"{self.author}: {self.contents}"
