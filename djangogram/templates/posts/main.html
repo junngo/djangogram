@@ -3,5 +3,24 @@
 {% block content %}
 
 Here is Post Main Page.
+{% for post in posts %}
+    <div>
+        {{ post.author.id }}
+        {{ post.author.username }}
+        {{ post.author.profile_photo }}
+        {{ post.id }}
+        {{ post.image }}
+        {{ post.caption }}
+
+        {% for comment in post.comment_post %}
+        <br> {{ comment.contents }}
+        {% endfor %}
+
+        <div>
+            ---------------------------------
+        </div>
+
+    </div>
+{% endfor %}
 
 {% endblock content %}
