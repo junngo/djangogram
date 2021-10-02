@@ -1,26 +1,59 @@
 {% extends "posts/base.html" %}
+{% load static %}
 
 {% block content %}
 
-Here is Post Main Page.
 {% for post in posts %}
-    <div>
-        {{ post.author.id }}
-        {{ post.author.username }}
-        {{ post.author.profile_photo }}
-        {{ post.id }}
-        {{ post.image }}
-        {{ post.caption }}
+    <div class="post-box">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="profile">
+                {% if post.author.profile_photo != None %}
+                    <img src="{{ post.author.profile_photo }}">
+                {% else %}
+                    <img src="{% static 'images/posts/no_avatar.png' %}">
+                {% endif %}
+                <div>
+                    {{ post.author.username }}
+                </div>
+            </div>
 
-        {% for comment in post.comment_post %}
-        <br> {{ comment.contents }}
-        {% endfor %}
+            <div class="icon">
+                <i class="fa fa-pencil fa1x"></i>
+                <i class="fa fa-trash-o fa1x"></i>
+            </div>
 
-        <div>
-            ---------------------------------
         </div>
 
+        <!-- IMAGE -->
+        <img class="post-image" src="{{ post.image }}">
+
+        <!-- IMAGE-BUTTON -->
+        <i class="fa fa-heart-o fa-2x"></i>
+        <i class="fa fa-heart fa-2x"></i>
+
+        <div class="desc-box">
+            <!-- IMAGE-DESCRIPTION -->
+            <div class="image-desc">
+                <b>{{ post.author.username }}</b>
+                {{ post.caption }}
+            </div>
+
+            <!-- COMMENT -->
+            <div class="comment">
+                {% for comment in post.comment_post %}
+                    <div id="comment-{{ comment.id }}">
+                        <!-- {{ comment.author.username }} -->
+                        {{ comment.contents }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- COMMENT INPUT -->
+
     </div>
+
 {% endfor %}
 
 {% endblock content %}

@@ -1,0 +1,55 @@
+.post-box {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    width: 620px;
+    margin-top: 23px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-box .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+
+.post-box .header .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 13px;
+    margin-left: 10px;
+}
+
+.post-box .header .profile img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.post-box .header .icon {
+    margin-right: 10px;
+}
+
+.post-box .header .icon i {
+    margin-right: 13px;
+}
+
+.post-box .header .icon i:last-child {
+    margin-right: 0;
+}
+
+.post-box img.post-image {
+    width: 100%;
+    max-height: 480px;
+}
+
+.post-box .desc-box {
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-bottom: 22px;
+}
