@@ -51,6 +51,13 @@
         </div>
 
         <!-- COMMENT INPUT -->
+        <div class="comment-input">
+            <form action="{% url 'posts:comment_create' post.id %}" method="post">
+                {% csrf_token %}
+                {{ comment_form }}
+                <input type="submit" value="Post">
+            </form>
+        </div>
 
     </div>
 
