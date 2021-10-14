@@ -53,3 +53,32 @@
     margin-left: 16px;
     margin-bottom: 22px;
 }
+
+/* Comment */
+.post-box .comment-input {
+    height: 56px;
+    border: 1px solid #dbdbdb;   
+}
+.post-box .comment-input form {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-box .comment-input form textarea {
+    height: 100%;
+    width: 90%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5%;
+    margin: 5px;
+}
+.post-box .comment-input form input {
+    height: 50%;
+    box-sizing: border-box;
+    border: none;
+    margin-right: 10px;
+    background: rgba(255,255,255,0.5);
+    color: #0095f6;
+    font-weight: bolder;
+}
