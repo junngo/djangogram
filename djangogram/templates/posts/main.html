@@ -45,6 +45,11 @@
                     <div id="comment-{{ comment.id }}">
                         <b>{{ comment.author.username }}</b>
                         {{ comment.contents }}
+                        {% if user.id == comment.author.id %}
+                            <a href="{% url 'posts:comment_delete' comment.id %}">
+                                <i class="fa fa-trash-o fa1x"></i>
+                            </a>
+                        {% endif %}
                     </div>
                 {% endfor %}
             </div>
