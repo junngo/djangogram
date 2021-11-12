@@ -9,6 +9,9 @@ urlpatterns = [
     # /posts/create/
     path('create/', views.post_create, name='post_create'),
 
+    # /posts/3/update/
+    path('<int:post_id>/update/', views.post_update, name="post_update"),
+
     # /posts/1/comment_create/
     path('<int:post_id>/comment_create', views.comment_create, name="comment_create"),
 

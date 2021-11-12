@@ -18,10 +18,14 @@
                 </div>
             </div>
 
-            <div class="icon">
-                <i class="fa fa-pencil fa1x"></i>
-                <i class="fa fa-trash-o fa1x"></i>
-            </div>
+            {% if user.id == post.author.id %}
+                <div class="icon">
+                    <a href="{% url 'posts:post_update' post.id %}">
+                        <i class="fa fa-pencil fa1x"></i>
+                    </a>
+                    <i class="fa fa-trash-o fa1x"></i>
+                </div>
+            {% endif %}
 
         </div>
 
