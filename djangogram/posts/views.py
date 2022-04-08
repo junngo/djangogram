@@ -138,3 +138,28 @@ def post_like(request, post_id):
 
     else:
         return JsonResponse(status=403, data=response_body)
+
+
+def search(request):
+    if request.user.is_authenticated:
+        if request.method == "GET":
+            searchKeyword = request.GET.get("q", "")
+            comment_form = CommentForm()
+
+            user = get_object_or_404(user_model, pk=request.user.id)
+            following = user.following.all()
+            posts = models.Post.objects.filter(
+                (Q(author__in=following) | Q(author=user)) & Q(caption__contains=searchKeyword)
+            ).order_by("-create_at")
+
+            serializer = serializers.PostSerializer(posts, many=True)
+            print(serializer.data)
+
+            return render(
+                request,
+                'posts/main.html',
+                {"posts": serializer.data, "comment_form": comment_form}
+            )
+
+    else:
+        return render(request, 'users/main.html')
