@@ -54,7 +54,8 @@ def post_create(request):
             else:
                 print(form.errors)
 
-            return render(request, 'posts/main.html')
+            # return render(request, 'posts/main.html')
+            return redirect(reverse('posts:index'))
 
         else:
             return render(request, 'users/main.html')
